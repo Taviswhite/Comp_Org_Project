@@ -82,6 +82,11 @@ fibonacci_loop:
     move $a0, $t4               # load next Fibonacci into $a0
     syscall                     # print next Fibonacci
 
+    # Print space
+    li $v0, 4                   # system call for print string
+    la $a0, space               # load address of space
+    syscall                     # print space
+
 
     
 
