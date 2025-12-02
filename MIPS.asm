@@ -55,7 +55,10 @@ valid_input:
     move $a0, $t1               # load F0 into $a0
     syscall                     # print F0
 
-
+    # Print space
+    li $v0, 4                   # system call for print string
+    la $a0, space               # load address of space
+    syscall                     # print space
 
     
     
