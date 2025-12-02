@@ -91,6 +91,14 @@ fibonacci_loop:
     move $t1, $t2               # $t1 = previous $t2
     move $t2, $t4               # $t2 = current Fibonacci number
     addi $t3, $t3, 1            # increment counter
+
+    j fibonacci_loop            # jump back to loop
+    
+end_program:
+    # Print final newline
+    li $v0, 4                   # system call for print string
+    la $a0, newline             # load address of newline
+    syscall                     # print newline
     
 
     
