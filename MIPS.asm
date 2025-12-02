@@ -39,5 +39,9 @@ input_loop:
     j input_loop                # jump back to input loop
 
 
-    
+valid_input:
+    # Print newline after valid input
+    li $v0, 4                   # system call for print string
+    la $a0, newline             # load address of newline
+    syscall                     # print newline    
 
