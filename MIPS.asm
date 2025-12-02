@@ -87,7 +87,10 @@ fibonacci_loop:
     la $a0, space               # load address of space
     syscall                     # print space
 
-
+    # Update for next iteration
+    move $t1, $t2               # $t1 = previous $t2
+    move $t2, $t4               # $t2 = current Fibonacci number
+    addi $t3, $t3, 1            # increment counter
     
 
     
