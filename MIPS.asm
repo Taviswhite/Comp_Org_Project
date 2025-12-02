@@ -19,4 +19,10 @@ input_loop:
     syscall                     # read integer into $v0
     move $t0, $v0               # store input in $t0 (N)
 
+   # Check if N >= 22
+    li $t1, 22                  # load 22 into $t1
+    bge $t0, $t1, valid_input   # if N >= 22, go to valid_input
+
+
+    
 
