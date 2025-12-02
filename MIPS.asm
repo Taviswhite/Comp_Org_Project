@@ -48,7 +48,14 @@ valid_input:
     # Initialize Fibonacci sequence
     li $t1, 0                   # first Fibonacci number (F0)
     li $t2, 1                   # second Fibonacci number (F1)
-    li $t3, 2                  # counter for printed numbers
+    li $t3, 2                   # counter for printed numbers
+
+    # Print first Fibonacci number (0)
+    li $v0, 1                   # system call for print integer
+    move $a0, $t1               # load F0 into $a0
+    syscall                     # print F0
+
+
 
     
     
