@@ -33,6 +33,11 @@ input_loop:
     la $a0, newline             # load address of newline
     syscall                     # print newline
 
+    li $v0, 4                   # system call for print string
+    la $a0, prompt_msg          # load address of prompt message
+    syscall                     # print prompt again
+    j input_loop                # jump back to input loop
+
 
     
 
