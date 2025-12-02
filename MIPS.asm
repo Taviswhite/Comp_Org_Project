@@ -76,6 +76,13 @@ fibonacci_loop:
     
     # Calculate next Fibonacci number
     add $t4, $t1, $t2           # $t4 = $t1 + $t2 (next Fibonacci)
+
+    # Print next Fibonacci number
+    li $v0, 1                   # system call for print integer
+    move $a0, $t4               # load next Fibonacci into $a0
+    syscall                     # print next Fibonacci
+
+
     
 
     
