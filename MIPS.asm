@@ -60,5 +60,12 @@ valid_input:
     la $a0, space               # load address of space
     syscall                     # print space
 
+    # Print second Fibonacci number (1)
+    li $v0, 1                   # system call for print integer
+    move $a0, $t2               # load F1 into $a0
+    syscall                     # print F1
+
+
+
     
     
