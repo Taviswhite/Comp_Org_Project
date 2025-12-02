@@ -45,3 +45,10 @@ valid_input:
     la $a0, newline             # load address of newline
     syscall                     # print newline    
 
+    # Initialize Fibonacci sequence
+    li $t1, 0                   # first Fibonacci number (F0)
+    li $t2, 1                   # second Fibonacci number (F1)
+    li $t3, 2                  # counter for printed numbers
+
+    
+    
