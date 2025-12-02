@@ -99,7 +99,10 @@ end_program:
     li $v0, 4                   # system call for print string
     la $a0, newline             # load address of newline
     syscall                     # print newline
-    
+
+    # Exit program
+    li $v0, 10                  # system call for exit
+    syscall                     # exit program
 
     
     
