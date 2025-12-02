@@ -28,6 +28,11 @@ input_loop:
     la $a0, error_msg           # load address of error message
     syscall 
 
+    # Print newline and prompt again
+    li $v0, 4                   # system call for print string
+    la $a0, newline             # load address of newline
+    syscall                     # print newline
+
 
     
 
