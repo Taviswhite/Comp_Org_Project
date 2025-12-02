@@ -70,6 +70,13 @@ valid_input:
     la $a0, space               # load address of space
     syscall                     # print space
 
+fibonacci_loop:
+    # Check if we've printed N numbers
+    beq $t3, $t0, end_program   # if counter == N, end program
+    
+    # Calculate next Fibonacci number
+    add $t4, $t1, $t2           # $t4 = $t1 + $t2 (next Fibonacci)
+    
 
     
     
