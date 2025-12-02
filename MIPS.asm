@@ -3,3 +3,6 @@
   error_msg:     .asciiz "Illegal Number! "
   newline:       .asciiz "\n"
   space:         .asciiz " "
+
+.text
+.globl main
