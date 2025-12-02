@@ -18,3 +18,5 @@ input_loop:
     li $v0, 5                   # system call for read integer
     syscall                     # read integer into $v0
     move $t0, $v0               # store input in $t0 (N)
+
+
