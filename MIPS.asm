@@ -6,3 +6,9 @@
 
 .text
 .globl main
+
+main:
+    # Initialize program
+    li $v0, 4                   # system call for print string
+    la $a0, prompt_msg          # load address of prompt message
+    syscall                     # print prompt
