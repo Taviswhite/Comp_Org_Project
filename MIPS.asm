@@ -23,6 +23,11 @@ input_loop:
     li $t1, 22                  # load 22 into $t1
     bge $t0, $t1, valid_input   # if N >= 22, go to valid_input
 
+   # Display error message
+    li $v0, 4                   # system call for print string
+    la $a0, error_msg           # load address of error message
+    syscall 
+
 
     
 
